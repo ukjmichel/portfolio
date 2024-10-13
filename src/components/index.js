@@ -1,15 +1,15 @@
-import HeroGridItem from './HeroGridItem';
 import HoverText from './HoverText';
+import Navbar from './Navbar';
 import AboutSection from './sections/AboutSection';
-import ContactSection from './sections/ContactSection';
 import HeroSection from './sections/HeroSection';
 import ProjectSection from './sections/ProjectSection';
+import SkillsSection from './sections/SkillsSection';
 
 export {
+  Navbar,
   HeroSection,
-  AboutSection,
-  ProjectSection,
-  ContactSection,
   HoverText,
-  HeroGridItem,
+  AboutSection,
+  SkillsSection,
+  ProjectSection,
 };

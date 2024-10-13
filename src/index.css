@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'SourceCodePro'; /* Choose a name for your font */
+  src: url('./assets/fonts/SourceCodePro-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal; /* Adjust if needed */
+}
+
+@font-face {
+  font-family: 'ZenKakuGothicNew-Regular'; /* Choose a name for your font */
+  src: url('./assets/fonts/ZenKakuGothicNew-Regular.ttf') format('truetype');
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal; /* Adjust if needed */
+}
+
+@font-face {
+  font-family: 'JiayouAkira-MAVEY'; /* Choose a name for your font */
+  src: url('./assets/fonts/JiayouAkira-MAVEY.otf') format('opentype');
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal; /* Adjust if needed */
+}

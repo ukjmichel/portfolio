@@ -1,4 +1,4 @@
-import { Box, Flex, IconButton, Text } from '@chakra-ui/react';
+import { Box, Flex, IconButton, Text, Stack } from '@chakra-ui/react';
 import ToggleThemeBtn from './ToggleThemeBtn';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { useState } from 'react';
@@ -7,40 +7,67 @@ export default function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
-    setMenuOpen(!isMenuOpen); // Toggle the menu open state
+    setMenuOpen((prevState) => !prevState); // Toggle the menu open state
   };
 
   return (
-    <Flex justify={'space-between'} align={'center'} paddingX={6} paddingY={2}>
-      <Text fontSize={32}>J-M Phyrum UK</Text>
-      <Flex gap={4}>
-        <ToggleThemeBtn />
-        <IconButton
-          aria-label="Open Menu"
-          icon={<GiHamburgerMenu />}
-          onClick={handleMenuClick}
-          variant="outline"
-          size="lg"
-          border={'none'}
-        />
-      </Flex>
+    <Flex
+      justify={'space-between'}
+      align={'center'}
+      paddingX={6}
+      paddingY={2}
+      borderBottom={'1px'}
+      borderColor={'gray.400'}
+      position="relative" // Ensure that the dropdown is positioned correctly
+    >
+      <IconButton
+        aria-label="Open Menu"
+        icon={<GiHamburgerMenu />}
+        onClick={handleMenuClick}
+        variant="outline"
+        size="lg"
+        border={'none'}
+      />
+      <ToggleThemeBtn />
 
       {/* Optionally, add menu content here */}
       {isMenuOpen && (
         <Box
           position="absolute"
           top="60px"
-          right={4}
-          width={`calc(100vw - ${2 * 16}px)`} // Correct syntax for calc with Chakra UI (4 * 16 to convert to px)
+          left="0" // Align the menu to the left
+          maxWidth={'200px'} // Set a fixed width for the dropdown
           bg="gray.700"
           zIndex="1000"
-          p={6}
-          textAlign="right"
+          p={4}
+          borderRadius="md" // Optional: adds rounded corners
         >
           {/* Your menu items here */}
-          <Box color="white">Menu Item 1</Box>
-          <Box color="white">Menu Item 2</Box>
-          <Box color="white">Menu Item 3</Box>
+          <Stack spacing={2} textAlign="left">
+            {' '}
+            {/* Align text to the left */}
+            <Text
+              color="white"
+              cursor="pointer"
+              _hover={{ textDecoration: 'underline' }}
+            >
+              Menu Item 1
+            </Text>
+            <Text
+              color="white"
+              cursor="pointer"
+              _hover={{ textDecoration: 'underline' }}
+            >
+              Menu Item 2
+            </Text>
+            <Text
+              color="white"
+              cursor="pointer"
+              _hover={{ textDecoration: 'underline' }}
+            >
+              Menu Item 3
+            </Text>
+          </Stack>
         </Box>
       )}
     </Flex>
