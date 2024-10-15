@@ -2,6 +2,7 @@ import { Box, Heading, Stack, Text, Button, Tag, Link } from '@chakra-ui/react';
 import Navbar from '../components/Navbar';
 import {
   AboutSection,
+  ContactSection,
   HeroSection,
   ProjectSection,
   SkillsSection,
@@ -15,6 +16,7 @@ const HomePages = () => {
       <AboutSection />
       <SkillsSection />
       <ProjectSection />
+      <ContactSection />
     </Box>
   );
 };

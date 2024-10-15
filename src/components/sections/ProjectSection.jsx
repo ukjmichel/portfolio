@@ -65,7 +65,7 @@ const ProjectSection = () => {
   ];
 
   return (
-    <Box p={10}>
+    <Box p={10} id="projets">
       <Heading as="h2" size="xl" mb={6}>
         Projets
       </Heading>

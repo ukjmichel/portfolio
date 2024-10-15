@@ -19,3 +19,22 @@
   font-weight: normal; /* Adjust if needed */
   font-style: normal; /* Adjust if needed */
 }
+
+@font-face {
+  font-family: 'Astron Boy'; /* Choose a name for your font */
+  src: url('./assets/fonts/AstronBoy.otf') format('opentype');
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal; /* Adjust if needed */
+}
+@font-face {
+  font-family: 'ExpletusSans-Regular'; /* Choose a name for your font */
+  src: url('./assets/fonts/ExpletusSans-Regular.ttf') format('truetype');
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal; /* Adjust if needed */
+}
+@font-face {
+  font-family: 'Rajdhani-Regular'; /* Choose a name for your font */
+  src: url('./assets/fonts/Rajdhani-Regular.ttf') format('truetype');
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal; /* Adjust if needed */
+}
