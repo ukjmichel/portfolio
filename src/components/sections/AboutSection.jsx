@@ -54,7 +54,7 @@ const AboutSection = () => {
         mb={4}
         color={textColor}
       >
-        Autodidacte et passionné de technologie, J-M Phyrum UK est un
+        Autodidacte et passionné de technologie, J-M Phirum UK est un
         développeur full-stack avec une expertise en React, Node.js, et Django.
         Fort d'une expérience solide dans la création d'applications web
         performantes et évolutives, il met un point d'honneur à allier

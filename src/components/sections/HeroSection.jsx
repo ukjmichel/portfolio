@@ -34,7 +34,7 @@ const HeroSection = () => {
         viewport={{ once: true, amount: 0.2 }} // Trigger when 20% in view
         textAlign={{ base: 'center', md: 'left' }}
       >
-        J-M Phyrum UK
+        J-M Phirum UK
       </MotionHeading>
 
       <MotionText
