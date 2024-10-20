@@ -14,17 +14,21 @@ const SkillsSection = () => {
   const skills = [
     { name: 'React', level: 90 },
     { name: 'Node.js', level: 80 },
-    { name: 'Django', level: 75 },
+    { name: 'Django', level: 80 },
     { name: 'JavaScript', level: 90 },
     { name: 'Python', level: 70 },
-    { name: 'Sql', level: 70 },
+    { name: 'SQL', level: 70 },
     { name: 'MongoDB', level: 75 },
-    { name: 'Cobol', level: 50 },
+    { name: 'COBOL', level: 50 },
     { name: 'Java', level: 20 },
   ];
 
   // Use responsive value to determine the number of blocks
-  const blockCount = useBreakpointValue({ base: 50, md: 100 });
+  const blockCount = useBreakpointValue({
+    base: 20,
+    xl: 30,
+    '2xl': 40,
+  }); // Adjust the number of blocks as needed
 
   // Function to generate a color based on skill level
   const getColor = (level, blockIndex) => {
@@ -32,7 +36,7 @@ const SkillsSection = () => {
     const percent = level / 100;
 
     // Calculate the colors for the gradient
-    const startColor = theme.colors.blue[200];
+    const startColor = theme.colors.blue[100];
     const endColor = theme.colors.blue[800];
 
     // Calculate the interpolated color
@@ -54,8 +58,8 @@ const SkillsSection = () => {
   };
 
   return (
-    <Box p={10}>
-      <Heading as="h2" size="xl" mb={6} fontFamily={'ZenKakuGothicNew-Regular'}>
+    <Box px={10}>
+      <Heading as="h2" size="xl" mb={6} id="skills-section">
         Compétences
       </Heading>
 
@@ -75,8 +79,8 @@ const SkillsSection = () => {
                 return (
                   <Box
                     key={blockIndex}
-                    width="5px"
-                    height="20px"
+                    width={{ base: '4%', xl: '2%' }} // Increased width
+                    height="30px" // Increased height
                     bg={
                       isFilled ? getColor(skill.level, blockIndex) : 'lightgray'
                     } // Use the generated color for filled blocks

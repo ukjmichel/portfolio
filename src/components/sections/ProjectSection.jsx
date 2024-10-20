@@ -1,4 +1,4 @@
-import { Box, Heading, Stack, Text, Link, Image } from '@chakra-ui/react';
+import { Box, Heading, Stack, Text, Link, Image, Grid } from '@chakra-ui/react';
 import {
   react_icon,
   django_icon,
@@ -28,7 +28,7 @@ const ProjectSection = () => {
     {
       title: 'Application web de location immobilière avec React',
       technologie: ['react'],
-      description: 'Application web de location',
+      description: `Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réaliser le front-end d'une application de location immobilière.`,
       links: [
         {
           url: 'https://github.com/ukjmichel/OC_devwev_p5.git',
@@ -39,7 +39,7 @@ const ProjectSection = () => {
     {
       title: 'API avec Node.js et Express',
       technologie: ['nodejs', 'expressjs', 'mongodb'],
-      description: 'API sécurisée pour une application mobile',
+      description: `Dans le cadre d'un  projet dans ma formation de développeur web, j'ai réaliser le back-office d'une librairie`,
       links: [
         {
           url: 'https://github.com/ukjmichel/OC_devwev_p6.git',
@@ -50,7 +50,7 @@ const ProjectSection = () => {
     {
       title: 'Click and Collect avec React et Django',
       technologie: ['react', 'django', 'drf', 'stripe'],
-      description: 'API sécurisée pour une application mobile',
+      description: `Dans le cadre d'un projet professionnelle auprès d'une épicerie asiatique situé sur Crêche sur Saône, je réalise un site proposant un Click and Collect`,
       links: [
         {
           url: 'https://github.com/ukjmichel/lm_drive',
@@ -65,11 +65,20 @@ const ProjectSection = () => {
   ];
 
   return (
-    <Box p={10} id="projets">
+    <Box px={10} id="projects-section">
       <Heading as="h2" size="xl" mb={6}>
         Projets
       </Heading>
-      <Stack spacing={4}>
+
+      {/* Grid Container for Projects */}
+      <Grid
+        templateColumns={{
+          base: '1fr', // Single column on small screens
+          lg: '1fr 1fr', // 2 columns on large screens (lg)
+          '2xl': '1fr 1fr 1fr', // 3 columns on extra-large screens (fullHd or 1920px and up)
+        }}
+        gap={6} // Space between grid items
+      >
         {projects.map((project, index) => (
           <Box key={index} p={5} shadow="md" borderWidth="1px">
             <Heading as="h3" size="md">
@@ -98,7 +107,7 @@ const ProjectSection = () => {
             </Box>
           </Box>
         ))}
-      </Stack>
+      </Grid>
     </Box>
   );
 };

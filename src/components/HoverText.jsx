@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 
 const HoverText = ({
   children,
-  lightColor = 'white',
-  darkColor = 'black',
-  hoverColor = 'gray',
-  fontSize = { base: '24px', sm: '32px', md: '48px', lg: '64px' },
+  lightColor = 'black',
+  darkColor = 'white',
+  hoverColor = 'blue.400',
+  fontSize = { base: '24px', sm: '32px', md: '48px', lg: '156px' },
 }) => {
   const { colorMode } = useColorMode(); // Get the current color mode
   const responsiveFontSize = useBreakpointValue(fontSize); // Get responsive font size

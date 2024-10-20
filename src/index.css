@@ -1,40 +1,19 @@
 @font-face {
-  font-family: 'SourceCodePro'; /* Choose a name for your font */
-  src: url('./assets/fonts/SourceCodePro-VariableFont_wght.ttf')
-    format('truetype');
-  font-weight: normal; /* Adjust if needed */
-  font-style: normal; /* Adjust if needed */
-}
-
-@font-face {
   font-family: 'ZenKakuGothicNew-Regular'; /* Choose a name for your font */
   src: url('./assets/fonts/ZenKakuGothicNew-Regular.ttf') format('truetype');
   font-weight: normal; /* Adjust if needed */
   font-style: normal; /* Adjust if needed */
 }
-
 @font-face {
-  font-family: 'JiayouAkira-MAVEY'; /* Choose a name for your font */
-  src: url('./assets/fonts/JiayouAkira-MAVEY.otf') format('opentype');
+  font-family: 'Elianto-Regular'; /* Choose a name for your font */
+  src: url('./assets/fonts/Elianto-Regular.otf') format('opentype');
   font-weight: normal; /* Adjust if needed */
   font-style: normal; /* Adjust if needed */
 }
 
 @font-face {
-  font-family: 'Astron Boy'; /* Choose a name for your font */
-  src: url('./assets/fonts/AstronBoy.otf') format('opentype');
-  font-weight: normal; /* Adjust if needed */
-  font-style: normal; /* Adjust if needed */
-}
-@font-face {
-  font-family: 'ExpletusSans-Regular'; /* Choose a name for your font */
-  src: url('./assets/fonts/ExpletusSans-Regular.ttf') format('truetype');
-  font-weight: normal; /* Adjust if needed */
-  font-style: normal; /* Adjust if needed */
-}
-@font-face {
-  font-family: 'Rajdhani-Regular'; /* Choose a name for your font */
-  src: url('./assets/fonts/Rajdhani-Regular.ttf') format('truetype');
+  font-family: 'droxen'; /* Choose a name for your font */
+  src: url('./assets/fonts/droxen.ttf') format('truetype');
   font-weight: normal; /* Adjust if needed */
   font-style: normal; /* Adjust if needed */
 }

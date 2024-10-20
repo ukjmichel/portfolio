@@ -1,7 +1,6 @@
 import {
   Box,
   Heading,
-  Stack,
   Text,
   Link,
   Button,
@@ -14,23 +13,21 @@ import {
   VStack,
   useColorModeValue,
   useColorMode, // Import useColorMode
-  IconButton,
+
 } from '@chakra-ui/react';
 import {
   FaLinkedin,
   FaGithub,
   FaEnvelope,
-  FaSun,
-  FaMoon,
+
 } from 'react-icons/fa';
 
 const ContactSection = () => {
-  // Using useColorMode to toggle between light and dark mode
-  const { colorMode, toggleColorMode } = useColorMode();
+
 
   return (
     <Box
-      id="contact"
+      id="contact-section"
       p={10}
       bg={useColorModeValue('gray.100', 'gray.800')}
       boxShadow="lg"
@@ -38,7 +35,7 @@ const ContactSection = () => {
     >
       <Heading
         as="h2"
-        size="2xl"
+        size="xl"
         mb={6}
         textAlign="center"
         color={useColorModeValue('gray.800', 'white')}
@@ -115,7 +112,7 @@ const ContactSection = () => {
                 </FormLabel>
                 <Input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder="Entrer adresse email"
                   size="lg"
                   variant="filled"
                   bg={useColorModeValue('white', 'gray.600')}
@@ -128,7 +125,7 @@ const ContactSection = () => {
                   Message
                 </FormLabel>
                 <Textarea
-                  placeholder="Enter your message"
+                  placeholder="Saisir votre message"
                   size="lg"
                   variant="filled"
                   bg={useColorModeValue('white', 'gray.600')}

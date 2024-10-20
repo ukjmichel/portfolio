@@ -1,24 +1,64 @@
-import { Box, Heading, Stack, Text, Button, Link } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import HoverText from '../HoverText';
+
+// Create motion components using motion.create
+const MotionBox = motion.create(Box);
+const MotionHeading = motion.create(Heading);
+const MotionText = motion.create(Text);
 
 const HeroSection = () => {
-  return (
-    <Box p={10} h={{ base: '30vh', md: '50vh' }}>
-      <Heading as="h1" size="4xl" mb={4}>
-        J-M Phyrum UK
-      </Heading>
+  // Animation variants for sliding in from the left
+  const slideInLeft = {
+    hidden: { x: '-20vw', opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { type: 'spring', stiffness: 50, duration: 0.8 },
+    },
+  };
 
-      <Text fontSize="xl" mb={6}>
+  return (
+    <MotionBox p={10} h={{ base: '30vh', md: '95vh' }}>
+      <MotionHeading
+        as="h1"
+        fontSize={{
+          base: '38px',
+          md: '56px',
+          lg: '72px',
+          '2xl': '96px',
+          fullHd: '128px',
+        }}
+        mb={4}
+        fontFamily={'droxen'}
+        variants={slideInLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} // Trigger when 20% in view
+        textAlign={{ base: 'center', md: 'left' }}
+      >
+        J-M Phyrum UK
+      </MotionHeading>
+
+      <MotionText
+        fontSize={{
+          base: '18px',
+          md: '26px',
+          lg: '32px',
+          '2xl': '44px',
+          fullHd: '58px',
+        }}
+        mb={6}
+        variants={slideInLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} // Trigger when 20% in view
+        textAlign={{ base: 'center', md: 'left' }}
+      >
         Développeur Full-Stack | React, Node.js, Django
-      </Text>
-      <Stack direction="row" spacing={4} justify="start">
-        <Link href="#projets" _hover={{ textDecoration: 'none' }}>
-          <Button colorScheme="blue">Voir mes projets</Button>
-        </Link>
-        <Button variant="outline" colorScheme="blue">
-          Me contacter
-        </Button>
-      </Stack>
-    </Box>
+      </MotionText>
+    </MotionBox>
   );
 };
+
 export default HeroSection;

@@ -1,75 +1,118 @@
-import { Box, Flex, IconButton, Text, Stack } from '@chakra-ui/react';
+import {
+  Flex,
+  IconButton,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  Link,
+  useDisclosure,
+} from '@chakra-ui/react';
 import ToggleThemeBtn from './ToggleThemeBtn';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { useState } from 'react';
 
 export default function Navbar() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleMenuClick = () => {
-    setMenuOpen((prevState) => !prevState); // Toggle the menu open state
+  const handleScrollToSection = (e, sectionId) => {
+    e.preventDefault(); // Prevent default anchor behavior
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      // Smooth scrolling to the section
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+
+      // Close the drawer after scrolling
+      setTimeout(() => {
+        onClose(); // Close the drawer
+      }, 500); // Set a delay for drawer close
+    } else {
+      console.warn(`Section with ID "${sectionId}" not found.`);
+    }
   };
 
   return (
     <Flex
-      justify={'space-between'}
-      align={'center'}
-      paddingX={6}
-      paddingY={2}
-      borderBottom={'1px'}
-      borderColor={'gray.400'}
-      position="relative" // Ensure that the dropdown is positioned correctly
+      justify="space-between"
+      align="center"
+      borderBottom="1px"
+      borderColor="gray.400"
+      height={{
+        base: '60px',
+        md: '80px',
+        xl: '100px',
+        fullHd: '120px',
+      }}
+      px={8}
     >
+      {/* Hamburger menu button */}
       <IconButton
         aria-label="Open Menu"
         icon={<GiHamburgerMenu />}
-        onClick={handleMenuClick}
         variant="outline"
-        size="lg"
-        border={'none'}
+        fontSize={{ base: '30px', xl: '40px', fullHd: '50px' }}
+        border="none"
+        onClick={onOpen} // Open the drawer on hamburger click
       />
-      <ToggleThemeBtn />
 
-      {/* Optionally, add menu content here */}
-      {isMenuOpen && (
-        <Box
-          position="absolute"
-          top="60px"
-          left="0" // Align the menu to the left
-          maxWidth={'200px'} // Set a fixed width for the dropdown
-          bg="gray.700"
-          zIndex="1000"
-          p={4}
-          borderRadius="md" // Optional: adds rounded corners
-        >
-          {/* Your menu items here */}
-          <Stack spacing={2} textAlign="left">
-            {' '}
-            {/* Align text to the left */}
-            <Text
-              color="white"
-              cursor="pointer"
-              _hover={{ textDecoration: 'underline' }}
-            >
-              Menu Item 1
-            </Text>
-            <Text
-              color="white"
-              cursor="pointer"
-              _hover={{ textDecoration: 'underline' }}
-            >
-              Menu Item 2
-            </Text>
-            <Text
-              color="white"
-              cursor="pointer"
-              _hover={{ textDecoration: 'underline' }}
-            >
-              Menu Item 3
-            </Text>
-          </Stack>
-        </Box>
-      )}
+      {/* Theme toggle button */}
+      <ToggleThemeBtn
+        onClick={(e) => {
+          e.preventDefault(); // Prevent default behavior
+          // Add theme toggle functionality here if needed
+        }}
+      />
+
+      {/* Drawer (sidebar) for all screens */}
+      <Drawer
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        returnFocusOnClose={false}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Menu</DrawerHeader>
+          <DrawerBody>
+            <Flex flexDirection="column" gap="20px">
+              <Link
+                href="#about-section"
+                onClick={(e) => handleScrollToSection(e, 'about-section')}
+                cursor="pointer"
+              >
+                A PROPOS
+              </Link>
+              <Link
+                href="#skills-section"
+                onClick={(e) => handleScrollToSection(e, 'skills-section')}
+                cursor="pointer"
+              >
+                COMPETENCE
+              </Link>
+              <Link
+                href="#projects-section"
+                onClick={(e) => handleScrollToSection(e, 'projects-section')}
+                cursor="pointer"
+              >
+                PROJETS
+              </Link>
+              <Link
+                href="#contact-section"
+                onClick={(e) => handleScrollToSection(e, 'contact-section')}
+                cursor="pointer"
+              >
+                CONTACT
+              </Link>
+            </Flex>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </Flex>
   );
 }

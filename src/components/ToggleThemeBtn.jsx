@@ -1,28 +1,22 @@
-import { Button, Flex, useColorMode, Checkbox } from '@chakra-ui/react';
-import { BsSun, BsMoonStarsFill } from 'react-icons/bs';
+import { Flex, useColorMode, IconButton } from '@chakra-ui/react';
+import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 
-export default function ToggleThemeCheckbox() {
+export default function ToggleThemeSwitch() {
   const { colorMode, setColorMode } = useColorMode();
 
-  const handleToggle = (mode) => {
-    setColorMode(mode);
+  const handleToggle = () => {
+    setColorMode(colorMode === 'light' ? 'dark' : 'light');
   };
 
   return (
-    <Flex justifyContent="center" alignItems="center">
-      <Checkbox
-        isChecked={colorMode === 'light'}
-        onChange={() => handleToggle('light')}
-        mr={4} // Add some space between the checkboxes
-      >
-        LIGHT
-      </Checkbox>
-      <Checkbox
-        isChecked={colorMode === 'dark'}
-        onChange={() => handleToggle('dark')}
-      >
-        DARK
-      </Checkbox>
-    </Flex>
+    <IconButton
+      aria-label="Toggle theme"
+      icon={colorMode === 'light' ? <SunIcon /> : <MoonIcon />}
+      onClick={handleToggle}
+      fontSize={{ base: '30px' }} // Adjust the icon size
+      bg="transparent"
+      color={colorMode === 'light' ? 'black' : 'white'} // Icon color based on theme
+      _hover={{ bg: 'transparent' }} // Prevent background on hover
+    />
   );
 }

@@ -1,4 +1,11 @@
-import { Box, Heading, Text, Stack, Image } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Text,
+  Stack,
+  Image,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { react_icon, nodejs_icon, django_icon } from '../../assets/icons';
 
 const techno = [
@@ -21,13 +28,35 @@ const techno = [
 ];
 
 const AboutSection = () => {
+  // Define background and text colors for light and dark themes
+  const bgColor = useColorModeValue('gray.100', 'gray.800'); // Background color
+  const textColor = useColorModeValue('gray.800', 'white'); // Text color
+  const headingColor = useColorModeValue('gray.900', 'gray.100'); // Heading color
+
   return (
-    <Box p={10}>
-      <Heading as="h2" size="xl" mb={6}>
+    <Box
+      m={5}
+      p={8}
+      bg={bgColor}
+      borderRadius="lg"
+      boxShadow="md"
+      id="about-section"
+    >
+      <Heading as="h2" size={{ base: 'xl' }} mb={6} color={headingColor}>
         À propos
       </Heading>
 
-      <Text fontSize={{ base: 'lg', md: 'xl', xl: '2xl' }} mb={4}>
+      <Text
+        fontSize={{
+          base: '18px',
+          md: '24px',
+          xl: '32px',
+          '2xl': '40px',
+          fullHd: '44px',
+        }}
+        mb={4}
+        color={textColor}
+      >
         Autodidacte et passionné de technologie, J-M Phyrum UK est un
         développeur full-stack avec une expertise en React, Node.js, et Django.
         Fort d'une expérience solide dans la création d'applications web
@@ -39,17 +68,19 @@ const AboutSection = () => {
 
       <Stack direction="row" spacing={4} alignItems="center">
         {techno.map(({ name, icon, description }) => (
-          <Box display="flex" alignItems="center">
+          <Box key={name} display="flex" alignItems="center">
             <Image
               src={icon}
               alt={name}
-              description={description}
-              boxSize={{ base: '32px', md: '34px', lg: '36px' }}
+              boxSize={{ base: '40px', md: '34px', lg: '36px' }}
             />
             <Text
               fontWeight="bold"
               ml={2}
               fontSize={{ base: '18px', md: '20px', lg: '22px' }}
+              color={textColor} // Set text color based on theme
+              fontFamily={'droxen'}
+              display={{ base: 'none', md: 'block' }}
             >
               {name}
             </Text>
