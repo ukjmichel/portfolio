@@ -1,4 +1,4 @@
-import { Box, Grid } from '@chakra-ui/react';
+import { Box, Grid, useColorMode } from '@chakra-ui/react';
 import Navbar from '../components/Navbar';
 import {
   AboutSection,
@@ -8,11 +8,12 @@ import {
   SkillsSection,
 } from '../components';
 import { motion } from 'framer-motion';
-
+import bg from '../assets/images/bg.jpg';
 // Create MotionBox using motion.create
 const MotionBox = motion.create(Box);
 
 const HomePages = () => {
+  const { colorMode } = useColorMode();
   // Animation variants for sliding in from left and right
   const slideInLeft = {
     hidden: { x: '-20vw', opacity: 0 },
@@ -33,12 +34,21 @@ const HomePages = () => {
   };
 
   return (
-    <Box>
-      {/* Navbar Section */}
-      <Navbar />
+    <Box maxW={'1920px'}>
+      <Box
+        bgImage={bg}
+        bgPos={'center'}
+        bgSize={'cover'}
+        filter={colorMode === 'dark' ? 'grayscale(100%)' : 'none'} // Apply grayscale in dark mode
+        bgColor={colorMode === 'dark' ? 'rgba(0, 0, 0, 0.5)' : 'transparent'} // Darken the image in dark mode
+        bgBlendMode="overlay" // Blend the background color and image
+      >
+        {/* Navbar Section */}
+        <Navbar />
 
-      {/* Hero Section */}
-      <HeroSection />
+        {/* Hero Section */}
+        <HeroSection />
+      </Box>
 
       {/* About and Skills Sections in a 2-column Grid */}
       <Grid

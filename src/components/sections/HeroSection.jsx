@@ -1,6 +1,5 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import HoverText from '../HoverText';
 
 // Create motion components using motion.create
 const MotionBox = motion.create(Box);
@@ -26,8 +25,6 @@ const HeroSection = () => {
           base: '38px',
           md: '56px',
           lg: '72px',
-          '2xl': '96px',
-          fullHd: '128px',
         }}
         mb={4}
         fontFamily={'droxen'}
@@ -45,8 +42,6 @@ const HeroSection = () => {
           base: '18px',
           md: '26px',
           lg: '32px',
-          '2xl': '44px',
-          fullHd: '58px',
         }}
         mb={6}
         variants={slideInLeft}

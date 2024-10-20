@@ -45,8 +45,6 @@ export default function Navbar() {
       height={{
         base: '60px',
         md: '80px',
-        xl: '100px',
-        fullHd: '120px',
       }}
       px={8}
     >
@@ -55,7 +53,7 @@ export default function Navbar() {
         aria-label="Open Menu"
         icon={<GiHamburgerMenu />}
         variant="outline"
-        fontSize={{ base: '30px', xl: '40px', fullHd: '50px' }}
+        fontSize={{ base: '30px', md: '40px' }}
         border="none"
         onClick={onOpen} // Open the drawer on hamburger click
       />
@@ -80,7 +78,7 @@ export default function Navbar() {
           <DrawerCloseButton />
           <DrawerHeader>Menu</DrawerHeader>
           <DrawerBody>
-            <Flex flexDirection="column" gap="20px">
+            <Flex flexDirection="column" gap="20px" fontSize={{ base: '24px' }}>
               <Link
                 href="#about-section"
                 onClick={(e) => handleScrollToSection(e, 'about-section')}

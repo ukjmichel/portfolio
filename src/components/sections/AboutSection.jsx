@@ -50,9 +50,6 @@ const AboutSection = () => {
         fontSize={{
           base: '18px',
           md: '24px',
-          xl: '32px',
-          '2xl': '40px',
-          fullHd: '44px',
         }}
         mb={4}
         color={textColor}
@@ -72,12 +69,12 @@ const AboutSection = () => {
             <Image
               src={icon}
               alt={name}
-              boxSize={{ base: '40px', md: '34px', lg: '36px' }}
+              boxSize={{ base: '40px', md: '34px', lg: '34px' }}
             />
             <Text
               fontWeight="bold"
               ml={2}
-              fontSize={{ base: '18px', md: '20px', lg: '22px' }}
+              fontSize={{ base: '18px', md: '20px' }}
               color={textColor} // Set text color based on theme
               fontFamily={'droxen'}
               display={{ base: 'none', md: 'block' }}

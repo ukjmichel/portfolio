@@ -58,7 +58,7 @@ const SkillsSection = () => {
   };
 
   return (
-    <Box px={10}>
+    <Box px={10} my={10}>
       <Heading as="h2" size="xl" mb={6} id="skills-section">
         Compétences
       </Heading>
