@@ -18,7 +18,7 @@ const HeroSection = () => {
   };
 
   return (
-    <MotionBox p={10} h={{ base: '30vh', md: '95vh' }}>
+    <MotionBox p={10} h={{ base: '50vh', md: '95vh' }}>
       <MotionHeading
         as="h1"
         fontSize={{
