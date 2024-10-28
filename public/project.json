@@ -1,0 +1,83 @@
+[
+  {
+    "title": "Meta Front-End Capstone: Little Lemon",
+    "technologie": ["react", "figma"],
+    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé le front end du site d'un restaurant. réalisation des wirefreame et maquette sur Figma, puis utilisation de React",
+    "links": [
+      {
+        "url": "",
+        "name": "Lien front-end"
+      }
+    ]
+  },
+  {
+    "title": "Meta Back-End Capstone: Little Lemon",
+    "technologie": ["nodejs"],
+    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé le back-end d'un restauran pour la gestion des réservation",
+    "links": [
+      {
+        "url": "https://github.com/ukjmichel/littlelemonBE",
+        "name": "Lien front-end"
+      }
+    ]
+  },
+  {
+    "title": "Créez une page web dynamique avec JavaScript",
+    "technologie": ["js"],
+    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé la partie dynamique d'un site portfolio d'une architecte d'intèrieur.",
+    "links": [
+      {
+        "url": "https://github.com/ukjmichel/OC_devwev_p3.git",
+        "name": "Lien front-end"
+      }
+    ]
+  },
+  {
+    "title": "Débuggez et optimisez un site de photographe",
+    "technologie": ["lighthouse", "og"],
+    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai débugger et optimiser une site pour le SEO et son référencement.",
+    "links": [
+      {
+        "url": "https://github.com/ukjmichel/OC_devwev_p4.git",
+        "name": "Lien front-end"
+      }
+    ]
+  },
+  {
+    "title": "Application web de location immobilière avec React",
+    "technologie": ["react"],
+    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réaliser le front-end d'une application de location immobilière.",
+    "links": [
+      {
+        "url": "https://github.com/ukjmichel/OC_devwev_p5.git",
+        "name": "Lien front-end"
+      }
+    ]
+  },
+  {
+    "title": "API avec Node.js et Express",
+    "technologie": ["nodejs", "expressjs", "mongodb"],
+    "description": "Dans le cadre d'un projet dans ma formation de développeur web, j'ai réaliser le back-office d'une librairie",
+    "links": [
+      {
+        "url": "https://github.com/ukjmichel/OC_devwev_p6.git",
+        "name": "Lien API"
+      }
+    ]
+  },
+  {
+    "title": "Click and Collect avec React et Django",
+    "technologie": ["react", "django", "drf", "stripe"],
+    "description": "Dans le cadre d'un projet professionnelle auprès d'une épicerie asiatique situé sur Crêche sur Saône, je réalise un site proposant un Click and Collect",
+    "links": [
+      {
+        "url": "https://github.com/ukjmichel/lm_drive",
+        "name": "Lien front-end"
+      },
+      {
+        "url": "https://github.com/ukjmichel/lm_drive_api.git",
+        "name": "Lien API"
+      }
+    ]
+  }
+]
