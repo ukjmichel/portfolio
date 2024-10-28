@@ -6,31 +6,18 @@ import {
   Button,
   Icon,
   Grid,
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea,
   VStack,
   useColorModeValue,
-  useColorMode, // Import useColorMode
-
 } from '@chakra-ui/react';
-import {
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope,
-
-} from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const ContactSection = () => {
-
-
   return (
     <Box
       id="contact-section"
       p={10}
       bg={useColorModeValue('gray.100', 'gray.800')}
-      boxShadow="lg"
+      boxShadow={useColorModeValue('lg', 'none')}
       mx="auto"
     >
       <Heading
@@ -48,13 +35,13 @@ const ContactSection = () => {
         textAlign="center"
         color={useColorModeValue('gray.600', 'gray.300')}
       >
-        "N'hésitez pas à m'envoyer un email ou à me contacter sur LinkedIn et
-        GitHub !"
+        N&apos;hésitez pas à m&apos;envoyer un email ou à me contacter sur
+        LinkedIn et GitHub !
       </Text>
 
       {/* Grid Layout */}
       <Grid
-        templateColumns={{ base: '1fr', md: '1fr 1fr' }} // 1 column on base, 2 columns on md
+        templateColumns={{ base: '1fr' }} // 1 column on base, 2 columns on md
         gap={10} // Space between grid items
       >
         {/* Left Section: Email, LinkedIn, and GitHub */}
@@ -96,49 +83,6 @@ const ContactSection = () => {
             </Button>
           </Link>
         </VStack>
-
-        {/* Right Section: Contact Form */}
-        <Box
-          bg={useColorModeValue('white', 'gray.700')}
-          p={6}
-          borderRadius="lg"
-          boxShadow="md"
-        >
-          <form>
-            <VStack spacing={4}>
-              <FormControl id="email" isRequired>
-                <FormLabel color={useColorModeValue('gray.800', 'white')}>
-                  Email
-                </FormLabel>
-                <Input
-                  type="email"
-                  placeholder="Entrer adresse email"
-                  size="lg"
-                  variant="filled"
-                  bg={useColorModeValue('white', 'gray.600')}
-                  color={useColorModeValue('gray.800', 'white')}
-                />
-              </FormControl>
-
-              <FormControl id="message" isRequired>
-                <FormLabel color={useColorModeValue('gray.800', 'white')}>
-                  Message
-                </FormLabel>
-                <Textarea
-                  placeholder="Saisir votre message"
-                  size="lg"
-                  variant="filled"
-                  bg={useColorModeValue('white', 'gray.600')}
-                  color={useColorModeValue('gray.800', 'white')}
-                />
-              </FormControl>
-
-              <Button colorScheme="blue" size="lg" type="submit" w="full">
-                Envoyer Message
-              </Button>
-            </VStack>
-          </form>
-        </Box>
       </Grid>
     </Box>
   );

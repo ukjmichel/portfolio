@@ -9,6 +9,7 @@ import {
 } from '../components';
 import { motion } from 'framer-motion';
 import bg from '../assets/images/bg.jpg';
+import FooterSection from '../components/sections/FooterSection';
 // Create MotionBox using motion.create
 const MotionBox = motion.create(Box);
 
@@ -85,6 +86,9 @@ const HomePages = () => {
       {/* Contact Section */}
       <Box py={10} px={6}>
         <ContactSection />
+      </Box>
+      <Box py={10} px={6}>
+        <FooterSection />
       </Box>
     </Box>
   );

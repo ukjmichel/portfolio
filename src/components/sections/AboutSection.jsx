@@ -39,7 +39,7 @@ const AboutSection = () => {
       p={8}
       bg={bgColor}
       borderRadius="lg"
-      boxShadow="md"
+      boxShadow={useColorModeValue('lg', 'none')}
       id="about-section"
     >
       <Heading as="h2" size={{ base: 'xl' }} mb={6} color={headingColor}>
