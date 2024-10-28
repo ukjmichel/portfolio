@@ -12,11 +12,22 @@
   },
   {
     "title": "Meta Back-End Capstone: Little Lemon",
-    "technologie": ["nodejs"],
+    "technologie": ["nodejs", "expressjs", "mongodb"],
     "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé le back-end d'un restauran pour la gestion des réservation",
     "links": [
       {
         "url": "https://github.com/ukjmichel/littlelemonBE",
+        "name": "Lien front-end"
+      }
+    ]
+  },
+  {
+    "title": "Créez la page d'accueil d'une agence de voyage",
+    "technologie": ["html", "css"],
+    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé la page d'accueil d'une agence de voyage en utilisant HTML et CSS. ",
+    "links": [
+      {
+        "url": "https://github.com/ukjmichel/OC_devwev_p2.git",
         "name": "Lien front-end"
       }
     ]

@@ -1,6 +1,6 @@
 import './App.css';
 import HomePages from './pages/HomePages';
-import { Box, Grid } from '@chakra-ui/react';
+import {Grid } from '@chakra-ui/react';
 
 function App() {
   return (

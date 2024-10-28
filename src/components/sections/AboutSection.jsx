@@ -64,7 +64,7 @@ const AboutSection = () => {
       </Text>
 
       <Stack direction="row" spacing={4} alignItems="center">
-        {techno.map(({ name, icon, description }) => (
+        {techno.map(({ name, icon }) => (
           <Box key={name} display="flex" alignItems="center">
             <Image
               src={icon}
