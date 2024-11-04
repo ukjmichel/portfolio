@@ -2,7 +2,7 @@
   {
     "title": "Meta Front-End Capstone: Little Lemon",
     "technologie": ["react", "figma"],
-    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé le front end du site d'un restaurant. réalisation des wirefreame et maquette sur Figma, puis utilisation de React",
+    "description": "Dans le cadre d'un projet dans ma formation de développeur Web, j'ai réalisé le front-end du site d'un restaurant. Réalisation des wireframes et maquettes sur Figma, puis utilisation de React.",
     "links": [
       {
         "url": "",
@@ -13,18 +13,18 @@
   {
     "title": "Meta Back-End Capstone: Little Lemon",
     "technologie": ["nodejs", "expressjs", "mongodb"],
-    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé le back-end d'un restauran pour la gestion des réservation",
+    "description": "Dans le cadre d'un projet dans ma formation de développeur Web, j'ai réalisé le back-end d'un restaurant pour la gestion des réservations.",
     "links": [
       {
         "url": "https://github.com/ukjmichel/littlelemonBE",
-        "name": "Lien front-end"
+        "name": "Lien back-end"
       }
     ]
   },
   {
     "title": "Créez la page d'accueil d'une agence de voyage",
     "technologie": ["html", "css"],
-    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé la page d'accueil d'une agence de voyage en utilisant HTML et CSS. ",
+    "description": "Dans le cadre d'un projet dans ma formation de développeur Web, j'ai réalisé la page d'accueil d'une agence de voyage en utilisant HTML et CSS.",
     "links": [
       {
         "url": "https://github.com/ukjmichel/OC_devwev_p2.git",
@@ -35,7 +35,7 @@
   {
     "title": "Créez une page web dynamique avec JavaScript",
     "technologie": ["js"],
-    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réalisé la partie dynamique d'un site portfolio d'une architecte d'intèrieur.",
+    "description": "Dans le cadre d'un projet dans ma formation de développeur Web, j'ai réalisé la partie dynamique d'un site portfolio d'une architecte d'intérieur.",
     "links": [
       {
         "url": "https://github.com/ukjmichel/OC_devwev_p3.git",
@@ -45,8 +45,8 @@
   },
   {
     "title": "Débuggez et optimisez un site de photographe",
-    "technologie": ["lighthouse", "og"],
-    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai débugger et optimiser une site pour le SEO et son référencement.",
+    "technologie": ["lighthouse", "seo"],
+    "description": "Dans le cadre d'un projet dans ma formation de développeur Web, j'ai débuggé et optimisé un site pour le SEO et son référencement.",
     "links": [
       {
         "url": "https://github.com/ukjmichel/OC_devwev_p4.git",
@@ -57,7 +57,7 @@
   {
     "title": "Application web de location immobilière avec React",
     "technologie": ["react"],
-    "description": "Dans le cadre d'un projets dans ma formation de développeur Web, j'ai réaliser le front-end d'une application de location immobilière.",
+    "description": "Dans le cadre d'un projet dans ma formation de développeur Web, j'ai réalisé le front-end d'une application de location immobilière.",
     "links": [
       {
         "url": "https://github.com/ukjmichel/OC_devwev_p5.git",
@@ -68,7 +68,7 @@
   {
     "title": "API avec Node.js et Express",
     "technologie": ["nodejs", "expressjs", "mongodb"],
-    "description": "Dans le cadre d'un projet dans ma formation de développeur web, j'ai réaliser le back-office d'une librairie",
+    "description": "Dans le cadre d'un projet dans ma formation de développeur Web, j'ai réalisé le back-office d'une librairie.",
     "links": [
       {
         "url": "https://github.com/ukjmichel/OC_devwev_p6.git",
@@ -79,7 +79,7 @@
   {
     "title": "Click and Collect avec React et Django",
     "technologie": ["react", "django", "drf", "stripe"],
-    "description": "Dans le cadre d'un projet professionnelle auprès d'une épicerie asiatique situé sur Crêche sur Saône, je réalise un site proposant un Click and Collect",
+    "description": "Dans le cadre d'un projet professionnel auprès d'une épicerie asiatique située à Crêche-sur-Saône, j'ai réalisé un site proposant un service de Click and Collect.",
     "links": [
       {
         "url": "https://github.com/ukjmichel/lm_drive",

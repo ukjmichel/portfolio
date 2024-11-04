@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
+// eslint-disable-next-line react/prop-types
 const SocialButton = ({ label = '', href = '', children }) => {
   return (
     <chakra.button
