@@ -45,7 +45,7 @@
   },
   {
     "title": "Débuggez et optimisez un site de photographe",
-    "technologie": ["lighthouse", "seo"],
+    "technologie": ["lighthouse"],
     "description": "Dans le cadre d'un projet dans ma formation de développeur Web, j'ai débuggé et optimisé un site pour le SEO et son référencement.",
     "links": [
       {
