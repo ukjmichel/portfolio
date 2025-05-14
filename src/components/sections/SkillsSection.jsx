@@ -12,16 +12,15 @@ const SkillsSection = () => {
 
   // Skills with corresponding skill level (rating out of 100)
   const skills = [
-    { name: 'React', level: 90 },
+    { name: 'React', level: 70 },
+    { name: 'Next', level: 60 },
+    { name: 'Angular', level: 80 },
     { name: 'Node.js', level: 80 },
-    { name: 'Django', level: 80 },
-    { name: 'SEO', level: 80 },
-    { name: 'JavaScript', level: 90 },
-    { name: 'Python', level: 70 },
-    { name: 'SQL', level: 70 },
-    { name: 'MongoDB', level: 75 },
+    { name: 'Django', level: 70 },
+    { name: 'Spring Boot', level: 50 },
+    { name: 'MySQL', level: 70 },
+    { name: 'MongoDB', level: 70 },
     { name: 'COBOL', level: 50 },
-    { name: 'Java', level: 20 },
   ];
 
   // Use responsive value to determine the number of blocks
